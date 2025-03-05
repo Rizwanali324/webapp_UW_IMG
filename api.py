@@ -33,7 +33,7 @@ def run_inference():
         return jsonify({'error': 'Invalid image format. Allowed formats are PNG, JPG, JPEG.'}), 400
     
     unique_id = str(uuid.uuid4())
-    image_path = f"/content/UW-DiffPhys_webapp/{unique_id}_{image_file.filename}"
+    image_path = f"/content/webapp_UW_IMG/{unique_id}_{image_file.filename}"
     image_file.save(image_path)
     
     command = [
